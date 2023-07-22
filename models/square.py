@@ -1,6 +1,6 @@
-from models.rectangle import Rectangle
+from models.shape import Shape
 
 
-class Square(Rectangle):
+class Square(Shape):
     def __init__(self, side):
         super().__init__(side, side)
