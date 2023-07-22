@@ -1,6 +1,7 @@
 import unittest
 
 from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestRectangle(unittest.TestCase):
@@ -44,6 +45,13 @@ class TestRectangle(unittest.TestCase):
         rect = Rectangle(3, 5)
         rect.set_width(10)
         self.assertEqual(rect.compute_area(), 30)
+
+    def test_create_square_raises_no_exception(self):
+        square = Square(10)
+
+    def test_compute_area_of_square(self):
+        square = Square(10)
+        self.assertEqual(square.compute_area(), 100)
 
 
 if __name__ == "__main__":
