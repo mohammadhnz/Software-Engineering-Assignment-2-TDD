@@ -19,6 +19,22 @@ class TestRectangle(unittest.TestCase):
         rect = Rectangle(8.5, 6.3)
         self.assertAlmostEqual(rect.compute_area(), 53.55, delta=0.01)
 
+    def test_rectangle_initialization_with_negative_width(self):
+        with self.assertRaises(ValueError):
+            Rectangle(-2, 7)
+
+    def test_rectangle_initialization_with_negative_height(self):
+        with self.assertRaises(ValueError):
+            Rectangle(3, -9)
+
+    def test_rectangle_initialization_with_non_numeric_width(self):
+        with self.assertRaises(TypeError):
+            Rectangle("3", 5)
+
+    def test_rectangle_initialization_with_non_numeric_height(self):
+        with self.assertRaises(TypeError):
+            Rectangle(6, [4])
+
 
 if __name__ == "__main__":
     unittest.main()
