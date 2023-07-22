@@ -1,5 +1,7 @@
 class Rectangle:
     def __init__(self, height, width):
-        raise NotImplemented()
+        self.height = height
+        self.width = width
+
     def compute_area(self):
-        pass
+        return self.height * self.width
