@@ -35,6 +35,16 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(6, [4])
 
+    def test_change_rectangle_height_works_correctly(self):
+        rect = Rectangle(3, 5)
+        rect.set_height(10)
+        self.assertEqual(rect.compute_area(), 50)
+
+    def test_change_rectangle_width_works_correctly(self):
+        rect = Rectangle(3, 5)
+        rect.set_width(10)
+        self.assertEqual(rect.compute_area(), 30)
+
 
 if __name__ == "__main__":
     unittest.main()
