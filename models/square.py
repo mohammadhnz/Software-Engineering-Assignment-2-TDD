@@ -1,6 +1,6 @@
 from models.rectangle import Rectangle
 
 
-class Square:
+class Square(Rectangle):
     def __init__(self, side):
-        raise NotImplemented()
+        super().__init__(side, side)
